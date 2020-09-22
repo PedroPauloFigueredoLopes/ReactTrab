@@ -24,7 +24,7 @@ function App() {
     <div className="App">
       <h1>Menu</h1>
         <Button href='funcionario'>Listar Funcionários</Button>
-        <Button href='/'>Adicionar Funcionário</Button>
+        <Button href='adicionaFuncionario'>Adicionar Funcionário</Button>
         <Button href='buscafuncionario'>Listar Funcionário Por ID</Button>
         <Button href='/'>Atualizar Funcionario</Button>
         <Button href='/'>Deletar Funcionario</Button>
