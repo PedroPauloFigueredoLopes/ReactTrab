@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import Func from './components/funcionario.js';
-import Funcid from './components/funcid.js';
-import Pag404 from './components/pagina404.js'
+import Func from './Repository/funcionario';
+import Funcid from './Repository/funcid';
+import Pag404 from './components/pagina404';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import axios from 'axios';

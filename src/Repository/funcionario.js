@@ -1,7 +1,7 @@
 import React,{Component, useState, useEffect} from 'react';
 import '../App.css';
 import styled from 'styled-components';
-import api from '../api/api.js';
+import api from '../Services/api.js';
 
 const Button = styled.a`
 text-decoration: none;
@@ -24,8 +24,9 @@ function Func() {
       const[data,setData] = useState([])
   
       useEffect(() =>{
-        api.get(`/funcionario`).then(response =>{
+        api.get('/funcionario').then(response =>{
           setData(response.data);
+          console.log(response.data)
         })
       },[])
     
