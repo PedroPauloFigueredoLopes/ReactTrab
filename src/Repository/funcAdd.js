@@ -20,6 +20,91 @@ transition: 0.5s all ease-out;
 background-color: Blue;
 color: white;
 }`
+<<<<<<< HEAD
+=======
+
+class FuncAdd extends Component {
+	constructor(props) {
+		super(props)
+
+		this.state = {
+            id: '',
+            nome: '',
+            cpf: '',
+		}
+	}
+
+	changeHandler = e => {
+		this.setState({ [e.target.name]: e.target.value })
+	}
+
+	submitHandler = e => {
+		e.preventDefault()
+		console.log(this.state)
+		api.post('/funcionario/')
+			.then(response => {
+				console.log(response)
+			})
+			.catch(error => {
+				console.log(error)
+			})
+	}
+
+	render() {
+		const { id,nome,cpf} = this.state
+		return (
+			<div>
+                 <Button  href='/'>Menu</Button>
+				<form onSubmit={this.submitHandler}>
+                <div>
+						<input
+							type="text"
+							name="id"
+							value={id}
+							onChange={this.changeHandler}
+						/>
+					</div>
+                    
+					<div>
+						<input
+							type="text"
+							name="nome"
+							value={nome}
+							onChange={this.changeHandler}
+						/>
+					</div>
+                    <div>
+						<input
+							type="text"
+							name="cpf"
+							value={cpf}
+							onChange={this.changeHandler}
+						/>
+					</div>
+					
+					<button type="submit">Submit</button>
+				</form>
+			</div>
+		)
+    }
+}
+export default FuncAdd;
+
+
+
+
+
+
+
+//SEGUNDO CODIGO USANDO FUNCION
+
+
+
+
+
+
+/*function FuncAdd() {
+>>>>>>> 3d402da542de3b2c13974ff8821ec92d5f402f17
 
 class FuncAdd extends Component {
 	constructor(props) {
@@ -189,4 +274,11 @@ export default FuncAdd;
       </div>
     );
   }
+<<<<<<< HEAD
   export default FuncAdd; */
+=======
+
+  export default FuncAdd; */
+  
+  
+>>>>>>> 3d402da542de3b2c13974ff8821ec92d5f402f17

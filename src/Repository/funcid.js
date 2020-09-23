@@ -60,4 +60,8 @@ function Funcid() {
   );
 }
 
+<<<<<<< HEAD
 export default Funcid;
+=======
+export default Funcid;
+>>>>>>> 3d402da542de3b2c13974ff8821ec92d5f402f17
