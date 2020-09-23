@@ -20,75 +20,73 @@ transition: 0.5s all ease-out;
 background-color: Blue;
 color: white;
 }`
-<<<<<<< HEAD
-=======
 
-class FuncAdd extends Component {
-	constructor(props) {
-		super(props)
+// class FuncAdd extends Component {
+// 	constructor(props) {
+// 		super(props)
 
-		this.state = {
-            id: '',
-            nome: '',
-            cpf: '',
-		}
-	}
+// 		this.state = {
+//             id: '',
+//             nome: '',
+//             cpf: '',
+// 		}
+// 	}
 
-	changeHandler = e => {
-		this.setState({ [e.target.name]: e.target.value })
-	}
+// 	changeHandler = e => {
+// 		this.setState({ [e.target.name]: e.target.value })
+// 	}
 
-	submitHandler = e => {
-		e.preventDefault()
-		console.log(this.state)
-		api.post('/funcionario/')
-			.then(response => {
-				console.log(response)
-			})
-			.catch(error => {
-				console.log(error)
-			})
-	}
+// 	submitHandler = e => {
+// 		e.preventDefault()
+// 		console.log(this.state)
+// 		api.post('/funcionario/')
+// 			.then(response => {
+// 				console.log(response)
+// 			})
+// 			.catch(error => {
+// 				console.log(error)
+// 			})
+// 	}
 
-	render() {
-		const { id,nome,cpf} = this.state
-		return (
-			<div>
-                 <Button  href='/'>Menu</Button>
-				<form onSubmit={this.submitHandler}>
-                <div>
-						<input
-							type="text"
-							name="id"
-							value={id}
-							onChange={this.changeHandler}
-						/>
-					</div>
+// 	render() {
+// 		const { id,nome,cpf} = this.state
+// 		return (
+// 			<div>
+//                  <Button  href='/'>Menu</Button>
+// 				<form onSubmit={this.submitHandler}>
+//                 <div>
+// 						<input
+// 							type="text"
+// 							name="id"
+// 							value={id}
+// 							onChange={this.changeHandler}
+// 						/>
+// 					</div>
                     
-					<div>
-						<input
-							type="text"
-							name="nome"
-							value={nome}
-							onChange={this.changeHandler}
-						/>
-					</div>
-                    <div>
-						<input
-							type="text"
-							name="cpf"
-							value={cpf}
-							onChange={this.changeHandler}
-						/>
-					</div>
+// 					<div>
+// 						<input
+// 							type="text"
+// 							name="nome"
+// 							value={nome}
+// 							onChange={this.changeHandler}
+// 						/>
+// 					</div>
+//                     <div>
+// 						<input
+// 							type="text"
+// 							name="cpf"
+// 							value={cpf}
+// 							onChange={this.changeHandler}
+// 						/>
+// 					</div>
 					
-					<button type="submit">Submit</button>
-				</form>
-			</div>
-		)
-    }
-}
-export default FuncAdd;
+// 					<button type="submit">Submit</button>
+// 				</form>
+// 			</div>
+// 		)
+//     }
+// }
+// export default FuncAdd;
 
 
 
@@ -99,135 +97,59 @@ export default FuncAdd;
 //SEGUNDO CODIGO USANDO FUNCION
 
 
-
-
-
-
-/*function FuncAdd() {
->>>>>>> 3d402da542de3b2c13974ff8821ec92d5f402f17
-
-class FuncAdd extends Component {
-	constructor(props) {
-		super(props)
-
-		this.state = {
-            id: '',
-            nome: '',
-            cpf: '',
-		}
-	}
-
-	changeHandler = e => {
-		this.setState({ [e.target.name]: e.target.value })
-	}
-
-	submitHandler = e => {
-		e.preventDefault()
-		console.log(this.state)
-		api.post('/funcionario/')
-			.then(response => {
-				console.log(response)
-			})
-			.catch(error => {
-				console.log(error)
-			})
-	}
-
-	render() {
-		const { id,nome,cpf} = this.state
-		return (
-			<div>
-                 <Button  href='/'>Menu</Button>
-				<form onSubmit={this.submitHandler}>
-                <div>
-						<input
-							type="text"
-							name="id"
-							value={id}
-							onChange={this.changeHandler}
-						/>
-					</div>
-                    
-					<div>
-						<input
-							type="text"
-							name="nome"
-							value={nome}
-							onChange={this.changeHandler}
-						/>
-					</div>
-                    <div>
-						<input
-							type="text"
-							name="cpf"
-							value={cpf}
-							onChange={this.changeHandler}
-						/>
-					</div>
-					
-					<button type="submit">Submit</button>
-				</form>
-			</div>
-		)
-    }
-}
-export default FuncAdd;
-
-
-
-
-
-
-
-//SEGUNDO CODIGO USANDO FUNCION
-
-
-
-
-
-
-/*function FuncAdd() {
+function FuncAdd() {
     const[data,setData] = useState([])
-    const[id,setId] = useState('')
     const[cpf,setCpf] = useState('')
     const[nome,setNome] = useState('')
+    const[funcionario,setFuncionario] = useState()
     var idTemp = 0
     var cpfTemp = 0
     var nomeTemp = 0
     useEffect(() => {
-       api.post(`/funcionario/`)
-    
-      .then(response => {
-        console.log(response)
-        setData(response.data);
+      const headers = {
+        'Content-Type': 'application/json; charset=UTF-8',
+      }
+      console.log(funcionario)
+      if(funcionario!=null){
+        api.post(`/funcionario`,funcionario,{headers:headers})
       
-      })
-      .catch (error => {
-        console.log(error)
-        alert ("Não foi possivel cadastrar");
-      
-      })
+        .then(response => {
+          console.log(response)
+          setData(response.data);
+          alert ("Usuario cadastrado com sucesso");
+        
+        })
+        .catch (error => {
+          console.log(error)
+          alert ("Não foi possivel cadastrar");
+        
+        })
+     }
   
-    },[id,nome,cpf])
+    },[funcionario])
   
-    const submitHandler = e => {
-		e.preventDefault()
-      setCpf(cpfTemp)
+    const submitHandler = (e) => {
+      e.preventDefault()
+      const funcionario={ 
+        cpf: cpf,
+        nome: nome
+      }
+      setFuncionario(funcionario)
         console.log()
     }
   
-    const changeHandlerCpf = e => {
-        cpfTemp = ({ [e.target.cpf]: e.target.value })
-        console.log(cpfTemp)    
-    }
-    const changeHandlerId = e => {
-        idTemp = ({ [e.target.id]: e.target.value })
-        console.log(idTemp)   
-    }
-    const changeHandlerNome = e => {
-        nomeTemp = ({ [e.target.nome]: e.target.value })
-        console.log(nomeTemp)        
-    }
+    // const changeHandlerCpf = e => {
+    //     cpfTemp = ({ [e.target.cpf]: e.target.value })
+    //     console.log(cpfTemp)    
+    // }
+    // const changeHandlerId = e => {
+    //     idTemp = ({ [e.target.id]: e.target.value })
+    //     console.log(idTemp)   
+    // }
+    // const changeHandlerNome = e => {
+    //     nomeTemp = ({ [e.target.nome]: e.target.value })
+    //     console.log(nomeTemp)        
+    // }
     
     return (
       <div>
@@ -235,50 +157,19 @@ export default FuncAdd;
               <br></br>
               <Button  href='/'>Menu</Button>
               <div>
-              <form onSubmit={submitHandler}>
-              <div>
-						<input
-							type="text"
-                            name="id"
-                            
-                            onChange={changeHandlerId}
-                            placeholder="Inserir o numero do ID"
-						/>
-					</div>
-                    
-					<div>
-						<input
-							type="text"
-                            name="nome"
-                           
-                            onChange={changeHandlerNome}
-                            placeholder="Inserir o nome do funcionario"
-						/>
-					</div>
-                    <div>
-						<input
-							type="text"
-                            name="cpf"
-                            cpf ="cpf"
-                            onChange={changeHandlerCpf}
-                            placeholder="Inserir o numero do CPF"
-						/>
-					</div>
-					
-					<button type="submit">Enviar</button>
-				</form>
-                
-              </div>
-        
+                <form onSubmit={submitHandler}>
+                                  
+                  <input type="text" name="nome" onChange={e =>setNome(e.target.value)} value={nome} 
+                    placeholder="Inserir o nome do funcionario"/>
+          
+                  <input type="text" name="cpf" cpf ="cpf" onChange={e =>setCpf(e.target.value)} value={cpf}
+                    placeholder="Inserir o numero do CPF"/>
+
+                  <button type="submit">Enviar</button>
+              </form>
+            </div>
           </div>
       </div>
     );
   }
-<<<<<<< HEAD
-  export default FuncAdd; */
-=======
-
-  export default FuncAdd; */
-  
-  
->>>>>>> 3d402da542de3b2c13974ff8821ec92d5f402f17
+  export default FuncAdd;
