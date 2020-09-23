@@ -1,3 +1,8 @@
+@font-face {
+  font-family: Minecraft;
+  src: url("components/Minecraft.ttf")       
+}
+
 .App {
   text-align: center;
 }
@@ -37,6 +42,73 @@
   }
 }
 
+
+/*Codigos genericos*/
+.nav{
+  background-color: #15a8ad;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  margin-top: 0%;
+  font-size: 16px;
+  z-index: 1;
+
+}
+.titulo{
+  background-color: #15a8ad;
+  text-align: center;
+  width: 100%;
+  font-size: 16px;
+}
+.titulo h1,h2{
+  margin-top:0px;
+}
+
+.container{
+  width: 50%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/*Codigos referentes ao App.js*/
+.menutexto{
+  padding-top: 1%;
+}
+.danielfoto{
+    width: 28%;
+    height: 28%;
+    border-radius: 50%;
+    box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.2);
+}
+.principal{
+  font-family: 'Minecraft',Arial, Helvetica;
+  
+}
+/*Codigos referentes ao funcionario.js*/
 .lista{
   list-style-type:none;
+  margin-top: 1%;
+}
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+/*Codigos referentes ao funcid.js*/
+.pesquisa{
+  padding-top: 2%;
+}
+
+.itempesquisado{
+  margin-top: 2%;
+  width: 25%;
+  background-color: #15a8ad;
+
 }

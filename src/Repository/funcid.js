@@ -1,24 +1,7 @@
 import React,{useState, useEffect} from 'react';
 import '../App.css';
-import styled from 'styled-components';
+import Button,{ButtonSubmit} from '../components/styleEstilos';
 import api from '../Services/api.js';
-import { render } from '@testing-library/react';
-
-const Button = styled.a`
-text-decoration: none;
-cursor: pointer;
-background: transparent;
-font-size: 16px;
-border-radius: 3px;
-color: Black;
-border: 2px solid Navy;
-margin: 0 1em;
-padding: 0.50em 1em;
-transition: 0.5s all ease-out;
-&:hover {
-background-color: Blue;
-color: white;
-}`
 
 function Funcid() {
 
@@ -53,54 +36,28 @@ function Funcid() {
   }
 
   return (
-    <div>
-         <div className="App">
-            <br></br>
-            <Button  href='/'>Menu</Button>
-            <div>
-              <form onSubmit= {handleSubmit}>
-                <h2 for="buscador">Buscar funcionário por ID</h2>
+      <div className="App">
+         <div className="titulo principal">
+            <h2 for="buscador">Buscar funcionário por ID</h2>
+            <p><b>Voltar ao menu</b></p>
+            <a href='/'><Button>Menu</Button></a>
+          </div>
+            <div className="pesquisa"> 
+              <form  onSubmit= {handleSubmit}>
+                <label><h2>Digite um ID</h2></label>
+                <label>Para encontrar o nome e cpf</label><br></br><br></br>
                 <input type="text" onChange = {handleChange} id="id" name="id" inclinename="buscaId" placeholder="Inserir o numero do ID"/>
-                <button type='submit'> Pesquisar </button>
+                <ButtonSubmit type='submit'> Pesquisar </ButtonSubmit>
               </form>
+            
+            <div className="container itempesquisado">
+              <h2>{data.nome}</h2>
+              <h3>{data.cpf}</h3>
             </div>
-            <h1>
-              {data.nome}
-            </h1>
-            <h2>{data.cpf}</h2>
+          </div>
         </div>
-    </div>
+
   );
 }
 
 export default Funcid;
-
-
-// import React from 'react';
-// import {FlatList, StyleSheet} from 'react-native';
-
-// import Post from './src/components/Post';
-
-// const App: () => React$Node = () => {
-//   const fotos = [
-//     {id: 1, usuario: 'eu 1'},
-//     {id: 2, usuario: 'eu 2'},
-//     {id: 3, usuario: 'eu 3'},
-//   ];
-
-//   return (
-//     <FlatList style={styles.container}
-//       data={fotos}
-//       keyExtractor={item => item.id}
-//       renderItem={({item}) => <Post foto={item} />}
-//     />
-//   );
-// };
-
-// const styles = StyleSheet.create({
-//   container: {
-//     marginTop: 20,
-//   },
-// });
-
-// export default App;

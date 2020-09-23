@@ -1,23 +1,8 @@
 import React,{Component, useState, useEffect} from 'react';
 import '../App.css';
-import styled from 'styled-components';
+import Button from '../components/styleEstilos';
 import api from '../Services/api.js';
 
-const Button = styled.a`
-text-decoration: none;
-cursor: pointer;
-background: transparent;
-font-size: 16px;
-border-radius: 3px;
-color: Black;
-border: 2px solid Navy;
-margin: 0 1em;
-padding: 0.50em 1em;
-transition: 0.5s all ease-out;
-&:hover {
-background-color: Blue;
-color: white;
-}`
 
 function Func() {
     
@@ -34,20 +19,27 @@ function Func() {
         return (
             <div>
                 <div className="App">
+                <div className="titulo principal">
                     <br></br>
                     <h1>Lista de Funcionarios</h1>
-                    <Button  href='/'>Menu</Button>
-                
-                <ul className="lista">
+                    <a href='/'><Button>Menu</Button></a>
+                </div>
+                <div>
+                </div>
+                <table className="container lista">
                     {data.map(dat => (
-                        <li  key={dat.id}>
+                      <tr>
+                        <th  key={dat.id}>
                            id: {dat.id}  -  Nome: {dat.nome}  -  Cpf: {dat.cpf}
-                        </li>
+                        </th>
+                      </tr>  
                     ))}
-                </ul>
-                
-                  <h3>------------------------------Fim da lista------------------------------</h3>
-                  <Button  href='/'>Menu</Button>
+                </table>
+                  <h3>Fim da lista</h3>
+                  <hr className="container"></hr>
+                  
+                  <p><b>Voltar ao menu</b></p>
+                  <a href='/'><Button>Menu</Button></a>
                 </div>
                 
             </div>
