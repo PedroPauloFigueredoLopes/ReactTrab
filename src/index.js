@@ -8,7 +8,7 @@ import Pag404 from './components/pagina404';
 import FuncAdd from './Repository/funcAdd';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import axios from 'axios';
+
 
 ReactDOM.render(
   <BrowserRouter>

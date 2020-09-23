@@ -1,4 +1,4 @@
-import React,{Component, useState, useEffect} from 'react';
+import React,{useState, useEffect} from 'react';
 import '../App.css';
 import Button from '../components/styleEstilos';
 import api from '../Services/api.js';
@@ -19,11 +19,12 @@ function Func() {
         return (
             <div>
                 <div className="App">
-                <div className="titulo principal">
-                    <br></br>
-                    <h1>Lista de Funcionarios</h1>
-                    <a href='/'><Button>Menu</Button></a>
-                </div>
+                  <div className="titulo principal">
+                      <br></br>
+                      <h1>Lista de Funcionarios</h1>
+                        <p><b>Voltar ao menu</b></p>
+                      <a href='/'><Button>Menu</Button></a>
+                  </div>
                 <div>
                 </div>
                 <table className="container lista">

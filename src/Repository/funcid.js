@@ -38,8 +38,8 @@ function Funcid() {
   return (
       <div className="App">
          <div className="titulo principal">
-            <h2 for="buscador">Buscar funcionário por ID</h2>
-            <p><b>Voltar ao menu</b></p>
+            <h2 for="buscador">Buscar funcionario por ID</h2>
+              <p><b>Voltar ao menu</b></p>
             <a href='/'><Button>Menu</Button></a>
           </div>
             <div className="pesquisa"> 
@@ -60,8 +60,4 @@ function Funcid() {
   );
 }
 
-<<<<<<< HEAD
 export default Funcid;
-=======
-export default Funcid;
->>>>>>> 3d402da542de3b2c13974ff8821ec92d5f402f17

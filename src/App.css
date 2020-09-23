@@ -72,6 +72,12 @@
   margin-left: auto;
 }
 
+.principal{
+  padding-top: 1%;
+  font-family: 'Minecraft',Arial, Helvetica;
+  
+}
+
 /*Codigos referentes ao App.js*/
 .menutexto{
   padding-top: 1%;
@@ -82,10 +88,7 @@
     border-radius: 50%;
     box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.2);
 }
-.principal{
-  font-family: 'Minecraft',Arial, Helvetica;
-  
-}
+
 /*Codigos referentes ao funcionario.js*/
 .lista{
   list-style-type:none;
@@ -112,3 +115,10 @@ tr:nth-child(even) {
   background-color: #15a8ad;
 
 }
+
+/*Codigos referentes ao funcid.js*/
+
+.formularios{
+  padding-top: 2%;
+}
+
