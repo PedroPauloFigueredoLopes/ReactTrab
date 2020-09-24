@@ -38,9 +38,9 @@ function Funcid() {
   return (
       <div className="App">
          <div className="titulo principal">
-            <h2 for="buscador">Buscar funcionario por ID</h2>
+            <h2>Buscar funcionario por ID</h2>
               <p><b>Voltar ao menu</b></p>
-            <a href='/'><Button>Menu</Button></a>
+              <a href='/'><Button><b>Menu</b></Button></a>
           </div>
             <div className="pesquisa"> 
               <form  onSubmit= {handleSubmit}>

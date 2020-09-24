@@ -23,7 +23,7 @@ function Func() {
                       <br></br>
                       <h1>Lista de Funcionarios</h1>
                         <p><b>Voltar ao menu</b></p>
-                      <a href='/'><Button>Menu</Button></a>
+                      <a href='/'><Button><b>Menu</b></Button></a>
                   </div>
                 <div>
                 </div>
@@ -40,9 +40,9 @@ function Func() {
                   <hr className="container"></hr>
                   
                   <p><b>Voltar ao menu</b></p>
-                  <a href='/'><Button>Menu</Button></a>
+                  <a href='/'><Button><b>Menu</b></Button></a>
                 </div>
-                
+
             </div>
         );
     

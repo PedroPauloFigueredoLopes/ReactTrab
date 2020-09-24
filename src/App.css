@@ -2,6 +2,9 @@
   font-family: Minecraft;
   src: url("components/Minecraft.ttf")       
 }
+body{
+  background-color: rgb(161, 156, 156);
+}
 
 .App {
   text-align: center;
@@ -19,7 +22,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #e7eeee;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -45,7 +48,7 @@
 
 /*Codigos genericos*/
 .nav{
-  background-color: #15a8ad;
+  background-color:  #626466;
   text-align: center;
   position: fixed;
   width: 100%;
@@ -55,7 +58,7 @@
 
 }
 .titulo{
-  background-color: #15a8ad;
+  background-color: #626466;
   text-align: center;
   width: 100%;
   font-size: 16px;
@@ -112,13 +115,19 @@ tr:nth-child(even) {
 .itempesquisado{
   margin-top: 2%;
   width: 25%;
-  background-color: #15a8ad;
+  background-color: #626466;
+  color: white;
 
 }
 
-/*Codigos referentes ao funcid.js*/
+/*Codigos referentes ao funcAdd.js*/
 
 .formularios{
   padding-top: 2%;
 }
 
+/*Codigos referentes ao funcDel.js*/
+.listadeleta{
+  padding-left: 26%;
+  margin-top: 1%;
+}

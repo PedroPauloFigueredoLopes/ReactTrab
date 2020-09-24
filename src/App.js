@@ -9,14 +9,14 @@ function App() {
   return (
     <div className="App">
       <div className="titulo principal"> 
-      <h1>Daniel Tutoriais</h1>
-      <img className="danielfoto" src={require('./components/pixel-art-guy-hyper.PNG')}></img>
-      <h2>Menu de Opções</h2>
-        <a href='funcionario'><Button>Listar Funcionários</Button></a>
-        <a href='buscafuncionario'><Button>Listar Funcionário Por ID</Button></a>
-        <a href='adicionaFuncionario'><Button>Adicionar Funcionário</Button></a>
-        <a href='funcionario'><Button>Atualizar Funcionario</Button></a>
-        <a href='funcionario'><Button>Deletar Funcionario</Button></a>
+      <h1>Guia de Metodos Crud</h1>
+      <img className="danielfoto" alt="foto do Daniel pixel" src={require('./components/pixel-art-guy-hyper.PNG')} ></img>
+      <h2>Menu de Opcoes</h2>
+        <a href='funcionario'><Button><b>Listar Funcionários</b></Button></a>
+        <a href='buscafuncionario'><Button><b>Listar Funcionário Por ID</b></Button></a>
+        <a href='adicionaFuncionario'><Button><b>Adicionar Funcionário</b></Button></a>
+        <a href='atualizaFuncionario'><Button><b>Atualizar Funcionario</b></Button></a>
+        <a href='deletaFuncionario'><Button><b>Deletar Funcionario</b></Button></a>
       </div>
       
         <div className="menutexto container">
