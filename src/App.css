@@ -1,0 +1,133 @@
+@font-face {
+  font-family: Minecraft;
+  src: url("components/Minecraft.ttf")       
+}
+body{
+  background-color: rgb(161, 156, 156);
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #e7eeee;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/*Codigos genericos*/
+.nav{
+  background-color:  #626466;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  margin-top: 0%;
+  font-size: 16px;
+  z-index: 1;
+
+}
+.titulo{
+  background-color: #626466;
+  text-align: center;
+  width: 100%;
+  font-size: 16px;
+}
+.titulo h1,h2{
+  margin-top:0px;
+}
+
+.container{
+  width: 50%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.principal{
+  padding-top: 1%;
+  font-family: 'Minecraft',Arial, Helvetica;
+  
+}
+
+/*Codigos referentes ao App.js*/
+.menutexto{
+  padding-top: 1%;
+}
+.danielfoto{
+    width: 28%;
+    height: 28%;
+    border-radius: 50%;
+    box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.2);
+}
+
+/*Codigos referentes ao funcionario.js*/
+.lista{
+  list-style-type:none;
+  margin-top: 1%;
+}
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+/*Codigos referentes ao funcid.js*/
+.pesquisa{
+  padding-top: 2%;
+}
+
+.itempesquisado{
+  margin-top: 2%;
+  width: 25%;
+  background-color: #626466;
+  color: white;
+
+}
+
+/*Codigos referentes ao funcAdd.js*/
+
+.formularios{
+  padding-top: 2%;
+}
+
+/*Codigos referentes ao funcDel.js*/
+.listadeleta{
+  padding-left: 26%;
+  margin-top: 1%;
+}
